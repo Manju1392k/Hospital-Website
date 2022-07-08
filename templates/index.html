@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sm Ctr Hospital</title>
+
+    <link rel="shortcut icon" href="/static/logo.jpg" type="image/jpg">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+   
+    <nav class="navbar navbar-expand-lg bg-danger navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Sm Ctr</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Call Now</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'book' %}">Book Appointment</a>
+              </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <img src="/static/hospital.jpg" class="d-block w-100" alt="...">
+      </div>
+
+      <div class="container mt-4">
+          <h1>Sm Ctr Hospital</h1>
+          <hr>
+          <h3 class='text-center'><li>Sm Ctr hospital is every budget friendly hospital for people</li></h3>
+          <h3 class='text-center'><li>User can Book Appointment from Any Where in this Website Without Standing in line.</li></h3>
+          <h3 class='text-center'><li>Sm Ctr hospital as good equipment and neat maintence</li></h3>
+          <h3 class='text-center'><li>The Main Advantage of in Our Hospital is User can Book Appointment from their House.</li></h3>
+          <h3 class='text-center'><li>User Also Can Book Advance Date Appointment so that outside city people easy to Book Appointment that's the main goal of the Our Hospital.</li></h3>
+      </div>
+
+      <div class="container mt-4">
+        <h1>Our Famous Doctor's</h1>
+        <hr>
+        {% comment %} you add images of the doctor's but iam ok with name's {% endcomment %}
+        <div class="bg-light p-5 rounded my-3">
+            <h4 class='fw-bold'>Rating 4.5</h4>
+            <h1>Raj Kumar</h1>
+            <p class="lead">Raj Kumar is a Psychiatrist.</p>
+            <a class="btn btn-lg btn-primary" href="/docs/5.2/components/navbar/" role="button">Book Appointment »</a>
+          </div>
+          <div class="bg-light p-5 rounded my-3">
+              <h4 class='fw-bold'>Rating 4.3</h4>
+              <h1>Shiva</h1>
+              <p class="lead">Shiva is a Radiologist.</p>
+              <a class="btn btn-lg btn-primary" href="/docs/5.2/components/navbar/" role="button">Book Appointment »</a>
+            </div>
+            <div class="bg-light p-5 rounded my-3">
+                <h4 class='fw-bold'>Rating 4.1</h4>
+                <h1>Ravi</h1>
+                <p class="lead">Ravi is a Nerologist.</p>
+                <a class="btn btn-lg btn-primary" href="/docs/5.2/components/navbar/" role="button">Book Appointment »</a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2022 Sm Ctr Hospital, Inc</p>
+      </footer>
+
+      <script>
+
+        {% for message in messages %}
+        alert('{{message}}');
+        {% endfor %}
+
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
